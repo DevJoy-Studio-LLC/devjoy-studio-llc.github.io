@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevJoy Studio - Pastel Color Palette</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .color-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #10B981;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transform: translateY(-100px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        .copy-notification.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">DevJoy Studio Pastel Palette</h1>
+            <p class="text-lg text-gray-600">A harmonious pastel color scheme built around your brand colors</p>
+        </div>
+
+        <!-- Primary Brand Colors -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Your Brand Colors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#B7E0D0')">
+                    <div class="w-full h-24 rounded-xl mb-4" style="background-color: #B7E0D0;"></div>
+                    <h3 class="text-xl font-semibold text-gray-800">Sage Green</h3>
+                    <p class="text-gray-600 mb-2">Calming, natural, trustworthy</p>
+                    <code class="bg-gray-100 px-3 py-1 rounded text-sm">#B7E0D0</code>
+                    <p class="text-xs text-gray-500 mt-2">RGB(183, 224, 208)</p>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#FEC7B3')">
+                    <div class="w-full h-24 rounded-xl mb-4" style="background-color: #FEC7B3;"></div>
+                    <h3 class="text-xl font-semibold text-gray-800">Peach Cream</h3>
+                    <p class="text-gray-600 mb-2">Warm, friendly, approachable</p>
+                    <code class="bg-gray-100 px-3 py-1 rounded text-sm">#FEC7B3</code>
+                    <p class="text-xs text-gray-500 mt-2">RGB(254, 199, 179)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Complementary Pastels -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Harmonious Pastels</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#C7B3FE')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #C7B3FE;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Lavender</h3>
+                    <p class="text-gray-600 text-sm mb-2">Creative, calm</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#C7B3FE</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#B3D4FE')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #B3D4FE;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Sky Blue</h3>
+                    <p class="text-gray-600 text-sm mb-2">Professional, clear</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#B3D4FE</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#FEFEB3')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #FEFEB3;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Butter Yellow</h3>
+                    <p class="text-gray-600 text-sm mb-2">Joyful, optimistic</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#FEFEB3</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#FEB3D4')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #FEB3D4;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Rose Pink</h3>
+                    <p class="text-gray-600 text-sm mb-2">Caring, gentle</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#FEB3D4</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Neutral Pastels -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Supporting Neutrals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#F5F5F0')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #F5F5F0;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Warm White</h3>
+                    <p class="text-gray-600 text-sm mb-2">Clean backgrounds</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#F5F5F0</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#E8E8E3')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #E8E8E3;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Light Beige</h3>
+                    <p class="text-gray-600 text-sm mb-2">Subtle contrast</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#E8E8E3</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#D4D4CF')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #D4D4CF;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Soft Gray</h3>
+                    <p class="text-gray-600 text-sm mb-2">Borders, dividers</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#D4D4CF</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Darker Accents -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Deeper Accent Colors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#8FCC9F')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #8FCC9F;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Forest Sage</h3>
+                    <p class="text-gray-600 text-sm mb-2">Text, buttons</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#8FCC9F</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#F4A584')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #F4A584;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Coral</h3>
+                    <p class="text-gray-600 text-sm mb-2">CTAs, highlights</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#F4A584</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#9B84F4')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #9B84F4;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Soft Purple</h3>
+                    <p class="text-gray-600 text-sm mb-2">Links, accents</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#9B84F4</code>
+                </div>
+                <div class="color-card bg-white rounded-2xl p-6 shadow-lg cursor-pointer" onclick="copyColor('#7A7A75')">
+                    <div class="w-full h-20 rounded-xl mb-4" style="background-color: #7A7A75;"></div>
+                    <h3 class="text-lg font-semibold text-gray-800">Charcoal</h3>
+                    <p class="text-gray-600 text-sm mb-2">Body text</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs">#7A7A75</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Palette Demo -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Palette in Action</h2>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="h-4" style="background: linear-gradient(to right, #B7E0D0, #FEC7B3, #C7B3FE, #B3D4FE, #FEFEB3, #FEB3D4);"></div>
+                <div class="p-8" style="background-color: #F5F5F0;">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4" style="color: #7A7A75;">DevJoy Studio</h3>
+                            <p class="text-lg mb-6" style="color: #7A7A75;">Creating joyful business solutions with our harmonious pastel palette.</p>
+                            <div class="flex gap-4">
+                                <button class="px-6 py-3 rounded-full font-semibold text-white transition-transform hover:scale-105" style="background-color: #8FCC9F;">Get Started</button>
+                                <button class="px-6 py-3 rounded-full font-semibold text-white transition-transform hover:scale-105" style="background-color: #F4A584;">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-6 rounded-xl" style="background-color: #B7E0D0;">
+                                <div class="text-2xl mb-2">🌱</div>
+                                <h4 class="font-semibold" style="color: #7A7A75;">Natural</h4>
+                            </div>
+                            <div class="p-6 rounded-xl" style="background-color: #FEC7B3;">
+                                <div class="text-2xl mb-2">🎨</div>
+                                <h4 class="font-semibold" style="color: #7A7A75;">Creative</h4>
+                            </div>
+                            <div class="p-6 rounded-xl" style="background-color: #C7B3FE;">
+                                <div class="text-2xl mb-2">✨</div>
+                                <h4 class="font-semibold" style="color: #7A7A75;">Magical</h4>
+                            </div>
+                            <div class="p-6 rounded-xl" style="background-color: #B3D4FE;">
+                                <div class="text-2xl mb-2">🚀</div>
+                                <h4 class="font-semibold" style="color: #7A7A75;">Innovative</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Guidelines -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Usage Guidelines</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800">Primary Usage</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #B7E0D0;"></span>Sage Green - Hero sections, key features</li>
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #FEC7B3;"></span>Peach Cream - Call-to-actions, highlights</li>
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #F5F5F0;"></span>Warm White - Page backgrounds</li>
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #7A7A75;"></span>Charcoal - Body text, headings</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800">Accent Usage</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #C7B3FE;"></span>Lavender - Secondary buttons, icons</li>
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #B3D4FE;"></span>Sky Blue - Links, info elements</li>
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #FEFEB3;"></span>Butter Yellow - Success states, joy elements</li>
+                        <li><span class="inline-block w-4 h-4 rounded mr-2" style="background-color: #FEB3D4;"></span>Rose Pink - Gentle alerts, soft accents</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyNotification" class="copy-notification">
+        Color copied to clipboard!
+    </div>
+
+    <script>
+        function copyColor(color) {
+            navigator.clipboard.writeText(color).then(function() {
+                const notification = document.getElementById('copyNotification');
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
