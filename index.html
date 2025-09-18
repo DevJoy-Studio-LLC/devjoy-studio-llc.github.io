@@ -12,11 +12,16 @@
                     colors: {
                         'joy-dark-green': '#587678',
                         'joy-green': '#B7E0D0',
-                        'joy-orange': '#FEC7B3'
-                        // 'joy-blue': '#3B82F6',
+                        'joy-light-green': '#D1FFEE',
+                        'joy-dark-orange': '#F4A584',
+                        'joy-orange': '#FEC7B3',
+                        'joy-light-orange': '#FFEBDA',
+                        'joy-blue': '#B3D4FE',
+                        'joy-light-blue': '#E2F5FE',
+                        'joy-white': '#FFFFFC',
+                        'joy-yellow': '#E0E09D',
                         // 'joy-purple': '#8B5CF6',
                         // 'joy-pink': '#EC4899',
-                        // 'joy-yellow': '#F59E0B',
                     }
                 }
             }
@@ -45,18 +50,18 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-joy-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
                         <img class="w-12 h-12 mr-3" src="logo image.png">
-                        <span class="text-xl font-bold gradient-text ">DevJoy Studio</span>
+                        <span class="text-xl font-bold text-joy-dark-green pt-2">DevJoy Studio</span>
                     </div>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-600 hover:text-joy-blue transition-colors">Services</a>
-                    <a href="#approach" class="text-gray-600 hover:text-joy-blue transition-colors">Our Approach</a>
+                    <a href="#services" class="text-gray-600 hover:text-joy-blue transition-colors pt-2">Services</a>
+                    <a href="#approach" class="text-gray-600 hover:text-joy-blue transition-colors pt-2">Our Approach</a>
                     <a href="#contact" class="bg-joy-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">Get Started</a>
                 </div>
             </div>
@@ -64,7 +69,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-white via-blue-50 to-purple-50 py-20">
+    <section class="bg-gradient-to-br from-white via-blue-50 to-joy-light-orange py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in-up">
@@ -77,9 +82,6 @@
                     <div class="flex flex-col sm:flex-row gap-4">
                         <button class="bg-joy-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-all transform hover:scale-105 shadow-lg">
                             Start Your Project
-                        </button>
-                        <button class="border-2 border-joy-blue text-joy-blue px-8 py-4 rounded-full font-semibold hover:bg-joy-blue hover:text-white transition-all">
-                            View Our Work
                         </button>
                     </div>
                 </div>
@@ -108,7 +110,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-20 bg-joy-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
@@ -117,8 +119,8 @@
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl hover-lift">
-                    <div class="w-16 h-16 bg-joy-blue rounded-2xl flex items-center justify-center mb-6">
+                <div class="bg-gradient-to-br from-joy-light-green to-joy-green p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-joy-dark-orange rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
@@ -128,8 +130,8 @@
                         Transform chaotic processes into smooth, trackable workflows that give you visibility and control over long-running business operations.
                     </p>
                 </div>
-                <div class="bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl hover-lift">
-                    <div class="w-16 h-16 bg-joy-purple rounded-2xl flex items-center justify-center mb-6">
+                <div class="bg-gradient-to-br from-joy-light-orange to-joy-orange p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-joy-blue rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                         </svg>
@@ -139,8 +141,8 @@
                         Build tailored software solutions that fit your unique business needs, designed for ease of use and long-term scalability.
                     </p>
                 </div>
-                <div class="bg-gradient-to-br from-pink-50 to-orange-100 p-8 rounded-2xl hover-lift">
-                    <div class="w-16 h-16 bg-joy-pink rounded-2xl flex items-center justify-center mb-6">
+                <div class="bg-gradient-to-br from-joy-light-blue to-joy-blue p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-joy-yellow rounded-2xl flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
                         </svg>
