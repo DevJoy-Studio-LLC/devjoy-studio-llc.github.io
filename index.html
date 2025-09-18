@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevJoy Studio - Sparking Joy in Business Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'joy-dark-green': '#587678',
+                        'joy-green': '#B7E0D0',
+                        'joy-orange': '#FEC7B3'
+                        // 'joy-blue': '#3B82F6',
+                        // 'joy-purple': '#8B5CF6',
+                        // 'joy-pink': '#EC4899',
+                        // 'joy-yellow': '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .gradient-text {
+            background: linear-gradient(135deg, #587678, #B7E0D0, #FEC7B3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="w-12 h-12 mr-3" src="logo image.png">
+                        <span class="text-xl font-bold gradient-text ">DevJoy Studio</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-600 hover:text-joy-blue transition-colors">Services</a>
+                    <a href="#approach" class="text-gray-600 hover:text-joy-blue transition-colors">Our Approach</a>
+                    <a href="#contact" class="bg-joy-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-white via-blue-50 to-purple-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Spark <span class="gradient-text">Joy</span> in Your Business Operations
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        We help small to medium companies streamline their workflows, build custom applications, and connect digital tools—all with fixed pricing, quality deliveries, and joyful ease of use.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-joy-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-all transform hover:scale-105 shadow-lg">
+                            Start Your Project
+                        </button>
+                        <button class="border-2 border-joy-blue text-joy-blue px-8 py-4 rounded-full font-semibold hover:bg-joy-blue hover:text-white transition-all">
+                            View Our Work
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="float">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-joy-yellow to-joy-pink rounded-full -mr-16 -mt-16 opacity-20"></div>
+                            <div class="relative">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-3 h-3 bg-red-400 rounded-full mr-2"></div>
+                                    <div class="w-3 h-3 bg-yellow-400 rounded-full mr-2"></div>
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+                                    <div class="h-4 bg-joy-blue rounded w-1/2"></div>
+                                    <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+                                    <div class="h-4 bg-joy-purple rounded w-2/3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We specialize in three core areas that transform how your business operates
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-joy-blue rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Workflow Tracking</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Transform chaotic processes into smooth, trackable workflows that give you visibility and control over long-running business operations.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-joy-purple rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Applications</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Build tailored software solutions that fit your unique business needs, designed for ease of use and long-term scalability.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-pink-50 to-orange-100 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-joy-pink rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Digital Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Connect your existing digital tools and platforms to create seamless data flow and eliminate manual work between systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Approach</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        We believe business technology should spark joy, not frustration. That's why we focus on three core principles.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-joy-yellow rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white font-bold text-sm">$</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Fixed Pricing</h3>
+                                <p class="text-gray-600">No surprises, no scope creep. You'll know exactly what you're investing before we start.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-joy-blue rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white font-bold text-sm">★</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Quality Deliveries</h3>
+                                <p class="text-gray-600">Every solution is crafted with attention to detail and built to last, ensuring long-term success.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-joy-purple rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white font-bold text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Ease of Use</h3>
+                                <p class="text-gray-600">We design with your team in mind, creating intuitive interfaces that anyone can master.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <div class="text-center mb-8">
+                            <div class="w-20 h-20 bg-gradient-to-br from-joy-yellow via-joy-pink to-joy-purple rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <span class="text-2xl">✨</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Spark Joy</h3>
+                            <p class="text-gray-600 mt-2">In every interaction, every solution, every delivery</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="text-2xl font-bold text-joy-blue">100%</div>
+                                <div class="text-sm text-gray-600">Client Satisfaction</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="text-2xl font-bold text-joy-purple">0</div>
+                                <div class="text-sm text-gray-600">Hidden Fees</div>
+                            </div>
+                            <div class="bg-pink-50 p-4 rounded-lg text-center">
+                                <div class="text-2xl font-bold text-joy-pink">∞</div>
+                                <div class="text-sm text-gray-600">Ongoing Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-joy-blue to-joy-purple">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Spark Joy in Your Business?</h2>
+            <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                Let's discuss how we can streamline your operations, build custom solutions, and connect your digital tools with fixed pricing and quality you can trust.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-joy-blue px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    Schedule a Free Consultation
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-joy-blue transition-all">
+                    hello@devjoystudio.com
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-joy-blue to-joy-purple rounded-lg mr-3"></div>
+                        <span class="text-xl font-bold text-white">DevJoy Studio</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md">
+                        A boutique freelancing company dedicated to sparking joy in business operations through quality custom solutions.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-joy-blue transition-colors">Workflow Tracking</a></li>
+                        <li><a href="#" class="hover:text-joy-blue transition-colors">Custom Applications</a></li>
+                        <li><a href="#" class="hover:text-joy-blue transition-colors">Digital Integration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">hello@devjoystudio.com</li>
+                        <li class="text-gray-400">Fixed pricing quotes</li>
+                        <li class="text-gray-400">Quality guaranteed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500">© 2025 DevJoy Studio. Sparking joy in business operations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.hover-lift').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
