@@ -3,11 +3,59 @@ layout: devjoy
 title: Blog
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+<!-- Blog Header Section -->
+<section class="bg-gradient-to-br from-white via-blue-50 to-joy-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center fade-in-up">
+            <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                The DevJoy <span class="gradient-text">Blog</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Insights, tips, and thoughts on streamlining business operations, workflow automation, and sparking joy in your digital tools.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Posts Section -->
+<section class="py-20 bg-joy-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {% if site.posts.size > 0 %}
+            <div class="space-y-8">
+                {% for post in site.posts %}
+                    <article class="bg-white border-2 border-joy-grey rounded-2xl p-8 hover-lift shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="mb-3">
+                            <time class="text-sm font-semibold text-joy-dark-green uppercase tracking-wide">
+                                {{ post.date | date: "%B %d, %Y" }}
+                            </time>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                            <a href="{{ post.url }}" class="hover:text-joy-dark-orange transition-colors">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                        <div class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            {{ post.excerpt | strip_html | truncatewords: 50 }}
+                        </div>
+                        <a href="{{ post.url }}" class="inline-flex items-center text-joy-dark-green font-semibold hover:text-joy-dark-orange transition-colors group">
+                            Read More
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center py-16">
+                <div class="w-20 h-20 bg-gradient-to-br from-joy-light-blue to-joy-blue rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span class="text-4xl">📝</span>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Coming Soon!</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    We're working on some great content. Check back soon for insights on business operations, workflow automation, and more!
+                </p>
+            </div>
+        {% endif %}
+    </div>
+</section>
