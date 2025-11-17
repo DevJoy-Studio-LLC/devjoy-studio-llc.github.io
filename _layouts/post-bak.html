@@ -27,26 +27,6 @@
             }
         }
     </script>
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .float { animation: float 3s ease-in-out infinite; }
-        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-        .gradient-text {
-            background: linear-gradient(135deg, #587678, #B7E0D0, #FEC7B3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hover-lift { transition: transform 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); }
-    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -55,7 +35,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="/" class="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity">
-                        <img class="w-12 h-12 mr-3" src="logo image.png" alt="logo of a smiling sun">
+                        <img class="w-12 h-12 mr-3" src="{{ url }}/logo image.png" alt="logo of a smiling sun">
                         <span class="text-xl font-bold text-joy-dark-green pt-2">DevJoy Studio</span>
                     </a>
                 </div>
@@ -69,7 +49,50 @@
         </div>
     </nav>
 
-    {{ content }}
+    <!-- Blog Post Content -->
+    <article class="py-20 bg-joy-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Back to Blog Link -->
+            <div class="mb-8">
+                <a href="/blog" class="inline-flex items-center text-joy-dark-green font-semibold hover:text-joy-dark-orange transition-colors group">
+                    <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+                    </svg>
+                    Back to Blog
+                </a>
+            </div>
+
+            <!-- Post Header -->
+            <header class="mb-12">
+                <time class="text-sm font-semibold text-joy-dark-green uppercase tracking-wide mb-4 block">
+                    {{ page.date | date: "%B %d, %Y" }}
+                </time>
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    {{ page.title }}
+                </h1>
+            </header>
+
+            <!-- Post Content -->
+            <div>
+                {{ content }}
+            </div>
+
+            <!-- Post Footer -->
+            <footer class="mt-16 pt-8 border-t-2 border-joy-grey">
+                <div class="flex items-center justify-between">
+                    <a href="/blog" class="inline-flex items-center text-joy-dark-green font-semibold hover:text-joy-dark-orange transition-colors group">
+                        <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+                        </svg>
+                        Back to Blog
+                    </a>
+                    <a href="/#contact" class="bg-joy-dark-green text-white px-6 py-3 rounded-full font-semibold hover:bg-joy-dark-orange transition-colors">
+                        Say Hello
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </article>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
@@ -77,11 +100,11 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="col-span-2">
                     <div class="flex items-center mb-4">
-                        <img class="w-12 h-12 mr-3" src="logo image.png">
+                        <img class="w-12 h-12 mr-3" src="/logo image.png">
                         <span class="text-xl font-bold text-white">DevJoy Studio</span>
                     </div>
                     <p class="text-gray-400 max-w-md">
-                        A boutique software development company dedicated to sparking joy through quality custom applications.
+                        Sparking joy through simplicity and connection.
                     </p>
                 </div>
                 <div>
@@ -133,3 +156,4 @@
     </script>
 </body>
 </html>
+

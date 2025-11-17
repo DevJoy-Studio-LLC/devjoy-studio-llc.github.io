@@ -1,0 +1,229 @@
+/* DevJoy Studio Blog Post Styling */
+
+/* Post Content Container */
+.post-content {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75;
+    max-width: none;
+}
+
+/* Headings */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    color: #111827; /* gray-900 */
+    font-weight: 700;
+    margin-top: 2em;
+}
+
+.post-content h1 {
+    font-size: 2.25rem; /* 36px */
+    margin-bottom: 1rem;
+}
+
+.post-content h2 {
+    font-size: 1.875rem; /* 30px */
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content h3 {
+    font-size: 1.5rem; /* 24px */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-content h4 {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 0.75rem;
+}
+
+/* Paragraphs */
+.post-content p {
+    color: #374151; /* gray-700 */
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+/* Links */
+.post-content a {
+    color: #587678; /* joy-dark-green */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.post-content a:hover {
+    color: #F4A584; /* joy-dark-orange */
+}
+
+.post-content a:visited {
+    color: #587678; /* joy-dark-green */
+}
+
+/* Strong/Bold */
+.post-content strong {
+    color: #111827; /* gray-900 */
+    font-weight: 600;
+}
+
+/* Inline Code */
+.post-content code {
+    color: #587678; /* joy-dark-green */
+    background-color: #E8E8E3; /* joy-beige */
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 1rem;
+    border: none;
+}
+
+/* Code Blocks */
+.post-content pre {
+    background-color: #111827; /* gray-900 */
+    color: #F3F4F6; /* gray-100 */
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: none;
+}
+
+.post-content pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.875rem;
+}
+
+/* Lists */
+.post-content ul,
+.post-content ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.post-content ul {
+    list-style-type: disc;
+}
+
+.post-content ol {
+    list-style-type: decimal;
+}
+
+.post-content li {
+    color: #374151; /* gray-700 */
+    margin-bottom: 0.5rem;
+    line-height: 1.75;
+}
+
+.post-content li > ul,
+.post-content li > ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+.post-content blockquote {
+    border-left: 4px solid #F4A584; /* joy-dark-orange */
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: #4B5563; /* gray-600 */
+    margin: 2rem 0;
+}
+
+.post-content blockquote p {
+    color: inherit;
+}
+
+/* Images */
+.post-content img {
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Horizontal Rules */
+.post-content hr {
+    border: none;
+    border-top: 2px solid #D4D4CF; /* joy-grey */
+    margin: 3rem 0;
+}
+
+/* Tables */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+
+.post-content table th,
+.post-content table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #D4D4CF; /* joy-grey */
+}
+
+.post-content table th {
+    background-color: #E8E8E3; /* joy-beige */
+    color: #111827; /* gray-900 */
+    font-weight: 600;
+}
+
+.post-content table tr:hover {
+    background-color: #FFFFFC; /* joy-white */
+}
+
+/* Syntax Highlighting for Code Blocks */
+.post-content .highlight {
+    background: #111827;
+    border-radius: 0.75rem;
+    margin: 2rem 0;
+}
+
+.post-content .highlighter-rouge .highlight {
+    background: #111827;
+}
+
+/* Override any conflicting styles */
+.post-content .highlight pre {
+    margin: 0;
+    background-color: transparent;
+}
+
+/* First paragraph after heading - optional larger text */
+.post-content h2 + p,
+.post-content h3 + p {
+    font-size: 1.125rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .post-content {
+        font-size: 1rem;
+    }
+
+    .post-content h1 {
+        font-size: 1.875rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .post-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .post-content h4 {
+        font-size: 1.125rem;
+    }
+}
