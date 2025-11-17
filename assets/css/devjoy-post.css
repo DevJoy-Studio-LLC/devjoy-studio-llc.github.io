@@ -1,5 +1,15 @@
 /* DevJoy Studio Blog Post Styling */
 
+/* Main Background - matches "About" section gradient */
+.page-content {
+    background: linear-gradient(to bottom right, #FFFFFC, #E2F5FE); /* from-joy-white to-joy-light-blue */
+}
+
+/* Post Meta (Date) */
+.post-meta {
+    color: #F4A584 !important; /* joy-dark-orange */
+}
+
 /* Post Content Container */
 .post-content {
     font-size: 1.125rem; /* 18px */
@@ -83,13 +93,13 @@
 
 /* Code Blocks */
 .post-content pre {
-    background-color: #111827; /* gray-900 */
-    color: #F3F4F6; /* gray-100 */
-    border-radius: 0.75rem;
+    background-color: #FFFFFF; /* white */
+    color: #111827; /* gray-900 */
+    border-radius: 1rem; /* rounded-2xl */
     padding: 1.5rem;
     overflow-x: auto;
     margin: 2rem 0;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
     border: none;
 }
 
@@ -184,19 +194,21 @@
 
 /* Syntax Highlighting for Code Blocks */
 .post-content .highlight {
-    background: #111827;
-    border-radius: 0.75rem;
+    background: #FFFFFF;
+    border-radius: 1rem; /* rounded-2xl */
     margin: 2rem 0;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
 }
 
 .post-content .highlighter-rouge .highlight {
-    background: #111827;
+    background: #FFFFFF;
 }
 
 /* Override any conflicting styles */
 .post-content .highlight pre {
     margin: 0;
     background-color: transparent;
+    box-shadow: none;
 }
 
 /* First paragraph after heading - optional larger text */
