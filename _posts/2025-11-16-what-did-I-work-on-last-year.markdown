@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What did I do last year?"
+title:  "What did I work on last year?"
 date:   2025-11-16
 categories: journaling
 ---
