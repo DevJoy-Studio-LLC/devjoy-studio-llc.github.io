@@ -7,6 +7,8 @@ categories: journaling
 
 The Holiday season is almost upon us. Thanksgiving, Black Friday, Christmas, New Year's Day, and... Your annual performance review.
 
+![a man who isn't ready for his performance review](/assets/images/sad_man_at_his_desk.jpg)
+
 Different companies have different processes and objectives for this review. At some places, it is used to rank you against your peers. Other, more forward thinking companies use the process as a tool to make their employees better, although the tool is fairly blunt and doesn't work all the time. 
 
 What's common, however, is that we need to remind our boss that we're good at what we do. Either we are looking at a bigger raise in the follow up Merit Increase season, or we want to score that promotion to the next level.
